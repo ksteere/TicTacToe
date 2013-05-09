@@ -2,19 +2,31 @@
 //  CSTDocument.m
 //  TicTacToe
 //
-//  Created by Kyle Steere on 5/8/13.
+//  Created by Kyle Steere on 5/9/13.
 //  Copyright (c) 2013 Kyle Steere. All rights reserved.
 //
 
 #import "CSTDocument.h"
+#import "CSTGameModel.h"
+#import "CSTInterfaceGameModel.h"
+#import "CSTMove.h" 
+#import "CSTButton.h" 
 
 @implementation CSTDocument
-
+{
+    id<CSTInterfaceGameModel> _playerMove;
+}
 - (id)init
 {
     self = [super init];
     if (self) {
-        // Add your subclass-specific initialization here.
+        _playerMove = [[CSTGameModel alloc] init];
+        
+        [(id)_playerMove addObserver: self
+                       forKeyPath:@"gameOverState"
+                          options:(NSKeyValueObservingOptionNew |
+                                   NSKeyValueObservingOptionOld)
+                          context:NULL];
     }
     return self;
 }
@@ -57,5 +69,34 @@
 {
     return YES;
 }
+
+-(void)popupGameOverAlertWithWinner:(NSString *)winnerName
+{
+    NSAlert* alert = [[NSAlert alloc]init];
+    [alert addButtonWithTitle:@"End Game"];
+    [alert addButtonWithTitle:@"Press 'CMD N' for New Game."];
+    [alert setMessageText:[NSString stringWithFormat:@"Game Over. %@ Won!", winnerName]];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert runModal];
+    return;
+}
+
+- (BOOL)isLegalFor:(NSString *)playerColor
+         toMoveAtX:(NSUInteger)x
+              andY:(NSUInteger)y
+{
+    CSTPlayerID thePlayer;
+    
+    if([playerColor isEqualToString:@"White"])
+        thePlayer = CSTID_PlayerOh;
+    else if([playerColor isEqualToString:@"Black"])
+        thePlayer = CSTID_PlayerEx;
+    else
+        thePlayer = CSTID_NOBODY;
+    
+    //return [_playerMove isLegalMove:[CSTMove];
+}
+
+
 
 @end

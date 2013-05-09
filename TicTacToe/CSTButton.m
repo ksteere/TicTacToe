@@ -10,18 +10,180 @@
 
 @implementation CSTButton
 
+-(void)setPlayerX{
+    [self setPlayerColor:@"Black"];
+    [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+    
+}
+-(void)setPlayerO{
+    [self setPlayerColor:@"White"];
+    return[self setAlternateImage:[NSImage imageNamed:@"WhiteStone.png"]];
+    
+}
 
--(void)setAlternateImage{
+
+
+-(IBAction)buttonZero:(id)sender{
+    [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
     if (CSTID_PlayerEx) {
         
-    [self setPlayerColor:PlayerX];
-}
+        [self setPlayerX];
+        [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+
+    }
     if(CSTID_PlayerOh){
-    
-        [self setPlayerColor:PlayerO];
+        
+        [self setPlayerO];
+        [self setAlternateImage:[NSImage imageNamed:@"WhiteStone.png"]];
+
+    }
+}
+
+-(IBAction)buttonOne:(id)sender{
+    [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+    if (CSTID_PlayerEx) {
+        
+        [self setPlayerX];
+        [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+        
+    }
+    if(CSTID_PlayerOh){
+        
+        [self setPlayerO];
+        [self setAlternateImage:[NSImage imageNamed:@"WhiteStone.png"]];
+        
     }
 
 }
+
+
+-(IBAction)buttonTwo:(id)sender{
+    [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+    if (CSTID_PlayerEx) {
+        
+        [self setPlayerX];
+        [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+        
+    }
+    if(CSTID_PlayerOh){
+        
+        [self setPlayerO];
+        [self setAlternateImage:[NSImage imageNamed:@"WhiteStone.png"]];
+        
+    }
+}
+
+-(IBAction)buttonThree:(id)sender{
+    [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+    if (CSTID_PlayerEx) {
+        
+        [self setPlayerX];
+        [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+        
+    }
+    if(CSTID_PlayerOh){
+        
+        [self setPlayerO];
+        [self setAlternateImage:[NSImage imageNamed:@"WhiteStone.png"]];
+        
+    }
+}
+
+-(IBAction)buttonFour:(id)sender{
+    [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+    if (CSTID_PlayerEx) {
+        
+        [self setPlayerX];
+        [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+        
+    }
+    if(CSTID_PlayerOh){
+        
+        [self setPlayerO];
+        [self setAlternateImage:[NSImage imageNamed:@"WhiteStone.png"]];
+        
+    }
+
+}
+
+-(IBAction)buttonFive:(id)sender{
+    [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+    if (CSTID_PlayerEx) {
+        
+        [self setPlayerX];
+        [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+        
+    }
+    if(CSTID_PlayerOh){
+        
+        [self setPlayerO];
+        [self setAlternateImage:[NSImage imageNamed:@"WhiteStone.png"]];
+        
+    }
+}
+
+-(IBAction)buttonSix:(id)sender{
+    [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+    if (CSTID_PlayerEx) {
+        
+        [self setPlayerX];
+        [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+        
+    }
+    if(CSTID_PlayerOh){
+        
+        [self setPlayerO];
+        [self setAlternateImage:[NSImage imageNamed:@"WhiteStone.png"]];
+        
+    }
+}
+
+-(IBAction)buttonSeven:(id)sender{
+    [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+    if (CSTID_PlayerEx) {
+        
+        [self setPlayerX];
+        [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+        
+    }
+    if(CSTID_PlayerOh){
+        
+        [self setPlayerO];
+        [self setAlternateImage:[NSImage imageNamed:@"WhiteStone.png"]];
+        
+    }
+}
+
+-(IBAction)buttonEight:(id)sender{
+    [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+    if (CSTID_PlayerEx) {
+        
+        [self setPlayerX];
+        [self setAlternateImage:[NSImage imageNamed:@"BlackStone.png"]];
+        
+    }
+    if(CSTID_PlayerOh){
+        
+        [self setPlayerO];
+        [self setAlternateImage:[NSImage imageNamed:@"WhiteStone.png"]];
+        
+    }
+}
+
+
+/*
+-(void)setAlternateImage{
+    if (CSTID_PlayerEx) {
+        
+        [self setPlayerX]; 
+    
+}
+    if(CSTID_PlayerOh){
+    
+        [self setPlayerO]; 
+    }
+
+}*/
 
 - (id)initWithFrame:(NSRect)frame
 {
